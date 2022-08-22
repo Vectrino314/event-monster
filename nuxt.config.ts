@@ -12,10 +12,17 @@ export default defineNuxtConfig({
     '@unocss/nuxt',
     '@intlify/nuxt3',
     '@nuxtjs/color-mode',
+    '@nuxtjs/strapi',
   ],
-
+  strapi: {
+    url: process.env.STRAPI_URL || 'http://localhost:1337',
+    prefix: '/api',
+    version: 'v4',
+    cookie: {},
+    cookieName: 'strapi_jwt',
+  },
   build: {
-    transpile: ['@headlessui/vue'],
+    transpile: ['@headlessui/vue', '@heroicons/vue'],
   },
   unocss: {
     uno: false,

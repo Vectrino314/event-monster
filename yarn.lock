@@ -525,6 +525,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@heroicons/vue@npm:^1.0.6":
+  version: 1.0.6
+  resolution: "@heroicons/vue@npm:1.0.6"
+  peerDependencies:
+    vue: ">= 3"
+  checksum: 63cf6ad94e271e5f8c47a2ee27e14d16aac8989f8450048853fea89bff545dae42db8ba3cb28dd08cef752fe32c88a418e976aae9ecd5a698973d56f5e87cb3c
+  languageName: node
+  linkType: hard
+
 "@humanwhocodes/config-array@npm:^0.10.4":
   version: 0.10.4
   resolution: "@humanwhocodes/config-array@npm:0.10.4"
@@ -1092,6 +1101,19 @@ __metadata:
     lodash.template: ^4.5.0
     pathe: ^0.3.0
   checksum: dd32dd89ef4dab7bcf1808d0a446a1a2373b4cad78a69d0f2c3ebea28d42e9497072f0b59734e31cc56e7b9fc9f374310be3edd4225a09324188de33181efad2
+  languageName: node
+  linkType: hard
+
+"@nuxtjs/strapi@npm:^1.5.0":
+  version: 1.5.0
+  resolution: "@nuxtjs/strapi@npm:1.5.0"
+  dependencies:
+    "@nuxt/kit": ^3.0.0-rc.6
+    defu: ^6.0.0
+    graphql: ^16.5.0
+    pathe: ^0.3.2
+    qs: ^6.10.5
+  checksum: a3ce7fb81864cdedc127e1b16d411fcef56ed3d152f88efe3f17862c73291d592a37491629efd32e121f59dd0873110ca421e7d5667d0821864b20017d6f1b6a
   languageName: node
   linkType: hard
 
@@ -5135,6 +5157,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"graphql@npm:^16.5.0":
+  version: 16.6.0
+  resolution: "graphql@npm:16.6.0"
+  checksum: bf1d9e3c1938ce3c1a81e909bd3ead1ae4707c577f91cff1ca2eca474bfbc7873d5d7b942e1e9777ff5a8304421dba57a4b76d7a29eb19de8711cb70e3c2415e
+  languageName: node
+  linkType: hard
+
 "gzip-size@npm:^6.0.0":
   version: 6.0.0
   resolution: "gzip-size@npm:6.0.0"
@@ -8154,6 +8183,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"qs@npm:^6.10.5":
+  version: 6.11.0
+  resolution: "qs@npm:6.11.0"
+  dependencies:
+    side-channel: ^1.0.4
+  checksum: 6e1f29dd5385f7488ec74ac7b6c92f4d09a90408882d0c208414a34dd33badc1a621019d4c799a3df15ab9b1d0292f97c1dd71dc7c045e69f81a8064e5af7297
+  languageName: node
+  linkType: hard
+
 "queue-microtask@npm:^1.2.2":
   version: 1.2.3
   resolution: "queue-microtask@npm:1.2.3"
@@ -8539,12 +8577,14 @@ __metadata:
   dependencies:
     "@antfu/eslint-config": 0.26.1
     "@headlessui/vue": 1.6.7
+    "@heroicons/vue": ^1.0.6
     "@iconify-json/carbon": 1.1.7
     "@iconify-json/ic": 1.1.9
     "@iconify-json/ph": 1.1.2
     "@iconify-json/twemoji": 1.1.5
     "@intlify/nuxt3": 0.2.3
     "@nuxtjs/color-mode": 3.1.4
+    "@nuxtjs/strapi": ^1.5.0
     "@nuxtjs/tailwindcss": 5.3.2
     "@pinia/nuxt": 0.4.0
     "@tailwindcss/aspect-ratio": 0.4.0
