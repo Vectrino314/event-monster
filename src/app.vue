@@ -1,5 +1,7 @@
 <script lang="ts" setup>
 import { InitApp } from '~/utils/initApp'
+import { useFeedback } from '~/store/feedback'
+const feedback = useFeedback()
 InitApp()
 const locale = useState<string>('locale.i18n')
 </script>
@@ -12,6 +14,7 @@ const locale = useState<string>('locale.i18n')
       <NuxtLayout>
         <NuxtPage />
       </NuxtLayout>
+      <Feedback />
     </Body>
   </Html>
 </template>

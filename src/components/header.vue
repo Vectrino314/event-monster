@@ -225,8 +225,8 @@ const blogPosts = [
             </Popover>
           </PopoverGroup>
           <div class="flex items-center md:ml-12">
-            <a href="/login" class="text-base font-medium text-gray-500 hover:text-gray-900"> Sign in </a>
-            <a href="#" class="inline-flex items-center justify-center px-4 py-2 ml-8 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700"> Sign up </a>
+            <a href="/sign-in" class="text-base font-medium text-gray-500 hover:text-gray-900"> Sign in </a>
+            <a href="/sign-up" class="inline-flex items-center justify-center px-4 py-2 ml-8 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700"> Sign up </a>
           </div>
         </div>
       </div>
