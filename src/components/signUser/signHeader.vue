@@ -2,12 +2,12 @@
 <script setup lang="ts">
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/vue/outline'
-const props = defineProps({
-  showLink: {
-    type: Boolean,
-    required: false,
-  },
-})
+const props = defineProps<{
+  showLink: Boolean
+  textPre: String
+  cta: String
+  urlLink: String
+}>()
 </script>
 
 <template>
@@ -18,8 +18,8 @@ const props = defineProps({
           <a href="/">
             <img class="w-auto h-7 mx-auto" src="/EventMonster Logo Web.png" alt="Workflow">
           </a>
-          <small v-if="showLink">Have an account? <a href="/sign-in" class="text-indigo-600	">
-            sign-in
+          <small v-if="showLink">{{ textPre }} <a :href="urlLink" class="text-indigo-600	">
+            {{ cta }}
           </a></small>
         </div>
       </div>
