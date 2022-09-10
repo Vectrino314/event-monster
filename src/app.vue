@@ -1,9 +1,10 @@
 <script lang="ts" setup>
 import { InitApp } from '~/utils/initApp'
-import { useFeedback } from '~/store/feedback'
-const feedback = useFeedback()
 InitApp()
 const locale = useState<string>('locale.i18n')
+const route = useRoute()
+// const layout = ['/reset-password', '/sign-in', '/sign-up', '/onboarded'].includes(route.fullPath) ? ref('sign') : ref('default')
+// console.log(layout)
 </script>
 
 <template>

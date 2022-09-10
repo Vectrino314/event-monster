@@ -18,7 +18,7 @@ const props = defineProps<{
           <a href="/">
             <img class="w-auto h-7 mx-auto" src="/EventMonster Logo Web.png" alt="Workflow">
           </a>
-          <small v-if="showLink">{{ textPre }} <a :href="urlLink" class="text-indigo-600	">
+          <small v-if="showLink">{{ textPre }} <a :href="urlLink" class="text-indigo-600">
             {{ cta }}
           </a></small>
         </div>
