@@ -4,64 +4,64 @@ import { ArrowSmRightIcon } from '@heroicons/vue/outline'
 import { useSignup } from '~/store/signup'
 import { useOnboarded } from '~/store/onboarded'
 import { actions, useFeedback } from '~/store/feedback'
-// const signingUp = ref(false)
 const router = useRouter()
-// const open = ref(false)
+const signup = useSignup()
+const onboarded = useOnboarded()
+
 const { getProviderAuthenticationUrl, register } = useStrapiAuth()
 const onDiscordClick = () => {
   window.location = getProviderAuthenticationUrl('discord')
 }
-const signup = useSignup()
-const onboarded = useOnboarded()
 const page = ref(signup.pages.find((s) => {
   return router.currentRoute.value.name.split('-').includes(s.id)
 }))
-// const step = ref(onboarded.stepsData(router.currentRoute.value.name))
-// const step = useState('step', () => onboarded.stepsData(router.currentRoute.value.name))
-// const step = () => ref(onboarded.stepsData(router.currentRoute.value.name))
+
 const step = computed({
-  get() {
-    return onboarded.stepsData(router.currentRoute.value.name)
-  },
-  set(value) {
-    // emit('subscribe:user', value)
-    console.log(value)
-  },
+  get() { return onboarded.stepsData(router.currentRoute.value.name) },
+  set(value) { return value },
+})
+const allSteps = computed({
+  get() { return onboarded.allSteps },
+  set(value) { return value },
 })
 const anyActive = computed({
-  get() {
-    return onboarded.anyActive(step.value.list)
-  },
-  set({ st, step }) {
-    // onboarded.setList(st, step)
-  },
+  get() { return onboarded.anyActive(step.value.list) },
+  set({ st, step }) {},
 })
-const type = computed({
-  get() {
-    return onboarded.form.type
-  },
-  set(value) {
-    // emit('subscribe:user', value)
-    onboarded.setType(value)
-  },
-})
+
+const checkStatus = () => {
+  console.log()
+  if (router.currentRoute.value.name.split('-').includes('complete')) {
+    allSteps.value.forEach((step) => {
+      onboarded.setStatus(step, 'complete')
+    })
+  }
+  else if (['individual', 'organization'].includes(router.currentRoute.value.name.split('-')[1])) {
+    console.log(step.value)
+
+    onboarded.setStatus(allSteps.value[0], 'complete')
+    onboarded.setStatus(allSteps.value[1], 'current')
+    onboarded.setStatus(allSteps.value[2], 'current')
+  }
+}
+checkStatus()
 </script>
 
 <template>
   <div v-if="step" class="flex flex-row">
-    <div class="basis-1/2 justify-center min-h-full pt-7 pb-12 sm:px-6 lg:px-8 w-full">
-      <!-- <Sign-Header :show-link="false" text-pre="Have an account?" :cta="page.link" :url-link="page.linkUrl" /> -->
+    <div class="basis-1/2 justify-center min-h-full pt-4 pb-4 sm:px-4 lg:px-4 w-full">
+      <Sign-Header :show-link="false" text-pre="Have an account?" cta="" url-link="" />
       <div class="sm:flex flex-col justify-center sm:items-center">
-        <Steps class="my-10" />
+        <Steps class="my-2" />
       </div>
       <div class="sm:mx-auto sm:w-full sm:max-w-md">
-        <h2 v-if="step.name !== 'complete'" class="mt-6 mb-6 text-3xl font-bold tracking-tight text-gray-900">
+        <h1 v-if="step.name !== 'complete'" class="my-3 text-lg font-bold tracking-tight text-gray-900">
           {{ step.title }}
-        </h2>
-        <p v-if="step.name !== 'complete'">
+        </h1>
+        <p v-if="step.name !== 'complete'" class="text-sm">
           {{ step.text }}
         </p>
-        <div class="my-10">
+        <div class="my-8">
           <slot />
         </div>
         <div class="flex w-full items-center" :class="step.name !== 'complete' ? 'justify-end' : 'justify-around'">
@@ -79,8 +79,8 @@ const type = computed({
         </div>
       </div>
     </div>
-    <div class="basis-1/2 hidden sm:flex flex-col justify-start h-100 overflow-hidden">
-      <img class="object-fit" :src="step.img" alt="">
+    <div class="basis-1/2 hidden sm:flex flex-col justify-start h-screen overflow-hidden">
+      <img class="h-full object-cover" :src="step.img" alt="">
     </div>
   </div>
 </template>

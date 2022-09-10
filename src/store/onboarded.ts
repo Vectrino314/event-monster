@@ -40,6 +40,16 @@ export const useOnboarded = defineStore('onboarded', {
         cta: 'Read more.',
         status: 'current',
         completed: false,
+        type: [
+          {
+            icon: 'UserIcon',
+            name: 'individual',
+          },
+          {
+            icon: 'UsersIcon',
+            name: 'organization',
+          },
+        ],
       },
       {
         id: '2',
@@ -108,6 +118,9 @@ export const useOnboarded = defineStore('onboarded', {
         // return s.id !== '2' || s.name === state.form.type
       })
     },
+    allSteps: (state) => {
+      return state.steps
+    },
     stepsData: state => (routeName) => {
       return state.steps.find((s) => {
         return routeName.split('-').includes(s.name)
@@ -116,11 +129,12 @@ export const useOnboarded = defineStore('onboarded', {
   },
   actions: {
     setStatus(step: Object, status: String) {
-      console.log(step.step.status, status, 'setSt')
-      this.steps.find((s) => {
-        console.log(s)
-        return true
-      })
+      console.log(step, status, 'setSt')
+      step.status = status
+      // this.steps.find((s) => {
+      //   console.log(s)
+      //   return true
+      // })
     },
     setType(types: String) {
       this.form.type = types
@@ -138,40 +152,41 @@ export const useOnboarded = defineStore('onboarded', {
       // this.form.type = types
     },
     navigateBack(route: Object, step: Object) {
-      const newFormat = this.steps.map((ii) => {
-        if (ii.name === step.name) {
-          ii.completed = false
-          ii.status = ''
-        }
-        else {
-          console.log(ii.status, ii.completed, ii.name, step.name)
-        }
-        return ii
+      const filterSteps = this.steps.filter((s) => { return parseInt(s.id) === parseInt(step.id) - 1 })
+      this.setStatus(step, '')
+      filterSteps.forEach((current) => {
+        this.setStatus(current, 'current')
       })
-      this.steps = newFormat
 
       navigateTo({
         path: ['complete'].includes(step.name) ? `/onboarded/${this.form.type}` : ['individual', 'organization'].includes(step.name) ? '/onboarded/start' : '',
       })
     },
     navigate(route: Object, step: Object) {
-      const newFormat = this.steps.map((ii) => {
-        if (['complete'].includes(step.name)) {
-          ii.status = ii.name === 'start' ? 'current' : ''
-        }
-        else {
-          if (ii.name === step.name) {
-            ii.completed = true
-            ii.status = 'complete'
-          }
+      const filterSteps = this.steps.filter((s) => { return parseInt(s.id) === parseInt(step.id) + 1 })
+      this.setStatus(step, 'complete')
+      filterSteps.forEach((current) => {
+        console.log(current.id === '3')
 
-          if (parseInt(step.id) + 1 === parseInt(ii.id) && ii.status !== 'completed')
-            ii.status = 'current'
-        }
-
-        return ii
+        this.setStatus(current, current.id === '3' ? 'complete' : 'current')
       })
-      this.steps = newFormat
+      // const newFormat = this.steps.map((ii) => {
+      //   if (['complete'].includes(step.name)) {
+      //     ii.status = ii.name === 'start' ? 'current' : ''
+      //   }
+      //   else {
+      //     if (ii.name === step.name) {
+      //       ii.completed = true
+      //       ii.status = 'complete'
+      //     }
+
+      //     if (parseInt(step.id) + 1 === parseInt(ii.id) && ii.status !== 'completed')
+      //       ii.status = 'current'
+      //   }
+
+      //   return ii
+      // })
+      // this.steps = newFormat
 
       navigateTo({
         path: ['complete'].includes(step.name) ? '/onboarded/start' : ['individual', 'organization'].includes(step.name) ? '/onboarded/complete' : `/onboarded/${this.form.type}`,

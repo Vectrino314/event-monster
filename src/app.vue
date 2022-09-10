@@ -3,8 +3,6 @@ import { InitApp } from '~/utils/initApp'
 InitApp()
 const locale = useState<string>('locale.i18n')
 const route = useRoute()
-// const layout = ['/reset-password', '/sign-in', '/sign-up', '/onboarded'].includes(route.fullPath) ? ref('sign') : ref('default')
-// console.log(layout)
 </script>
 
 <template>

@@ -1,18 +1,19 @@
 <script setup lang="ts">
-  import { computed, reactive, ref } from 'vue'
-  import { useSignup } from '~/store/signup'
-  import { actions, useFeedback } from '~/store/feedback'
-  // const signingUp = ref(false)
-  const router = useRouter()
-  // const open = ref(false)
-  const { getProviderAuthenticationUrl, register } = useStrapiAuth()
-  const onDiscordClick = () => {
-    window.location = getProviderAuthenticationUrl('discord')
-  }
-  const signup = useSignup()
-  const page = ref(signup.pages.find((s) => {
-    return s.id === router.currentRoute.value.name
-  }))
+import { computed, reactive, ref } from 'vue'
+import { useSignup } from '~/store/signup'
+import { actions, useFeedback } from '~/store/feedback'
+const router = useRouter()
+
+const { getProviderAuthenticationUrl, register } = useStrapiAuth()
+const onDiscordClick = () => {
+  window.location = getProviderAuthenticationUrl('discord')
+}
+const signup = useSignup()
+
+const page = computed({
+  get() { return signup.pageData(router.currentRoute.value.name) },
+  set() {},
+})
 </script>
 
 <template>
@@ -26,8 +27,8 @@
         <slot />
       </div>
     </div>
-    <div class="basis-1/2 hidden sm:flex flex-col justify-start overflow-clip">
-      <img class="w-40 h-auto object-center object-cover" :src="page.img" alt="">
+    <div class="basis-1/2 hidden sm:flex flex-col justify-start overflow-hidden">
+      <img class="h-full object-center object-cover" :src="page.img" alt="">
     </div>
   </div>
 </template>
