@@ -1,3 +1,13 @@
+<script>
+</script>
+
 <template>
-  <slot />
+  <div>
+    <Header />
+    <slot />
+  </div>
 </template>
+
+<style scoped>
+
+</style>

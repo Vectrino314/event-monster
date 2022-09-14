@@ -1,6 +1,6 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <script setup>
-import { CheckIcon } from '@heroicons/vue/solid'
+import { CheckIcon } from '@heroicons/vue/20/solid'
 import { computed, reactive, ref } from 'vue'
 import { useOnboarded } from '@/store/onboarded'
 const router = useRouter()

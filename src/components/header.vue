@@ -2,25 +2,27 @@
 <script setup>
 import { Popover, PopoverButton, PopoverGroup, PopoverPanel } from '@headlessui/vue'
 import {
-  BookmarkAltIcon,
+  Bars3BottomLeftIcon,
   BriefcaseIcon,
   ChartBarIcon,
   CheckCircleIcon,
-  CursorClickIcon,
-  DesktopComputerIcon,
   GlobeAltIcon,
   InformationCircleIcon,
-  MenuIcon,
   NewspaperIcon,
-  OfficeBuildingIcon,
   PhoneIcon,
   PlayIcon,
   ShieldCheckIcon,
   UserGroupIcon,
-  ViewGridIcon,
-  XIcon,
-} from '@heroicons/vue/outline'
-import { ChevronDownIcon } from '@heroicons/vue/solid'
+  XMarkIcon,
+} from '@heroicons/vue/24/outline'
+import { ChevronDownIcon } from '@heroicons/vue/24/solid'
+import {
+  BookmarkIcon,
+  BuildingOfficeIcon,
+  ComputerDesktopIcon,
+  CursorArrowRippleIcon,
+  ViewColumnsIcon,
+} from '@heroicons/vue/20/solid'
 
 const solutions = [
   {
@@ -33,14 +35,14 @@ const solutions = [
     name: 'Engagement',
     description: 'Speak directly to your customers in a more meaningful way.',
     href: '#',
-    icon: CursorClickIcon,
+    icon: CursorArrowRippleIcon,
   },
   { name: 'Security', description: 'Your customers\' data will be safe and secure.', href: '#', icon: ShieldCheckIcon },
   {
     name: 'Integrations',
     description: 'Connect with third-party tools that you\'re already using.',
     href: '#',
-    icon: ViewGridIcon,
+    icon: ViewColumnsIcon,
   },
 ]
 const callsToAction = [
@@ -50,7 +52,7 @@ const callsToAction = [
 ]
 const company = [
   { name: 'About', href: '#', icon: InformationCircleIcon },
-  { name: 'Customers', href: '#', icon: OfficeBuildingIcon },
+  { name: 'Customers', href: '#', icon: BuildingOfficeIcon },
   { name: 'Press', href: '#', icon: NewspaperIcon },
   { name: 'Careers', href: '#', icon: BriefcaseIcon },
   { name: 'Privacy', href: '#', icon: ShieldCheckIcon },
@@ -58,8 +60,8 @@ const company = [
 const resources = [
   { name: 'Community', href: '#', icon: UserGroupIcon },
   { name: 'Partners', href: '#', icon: GlobeAltIcon },
-  { name: 'Guides', href: '#', icon: BookmarkAltIcon },
-  { name: 'Webinars', href: '#', icon: DesktopComputerIcon },
+  { name: 'Guides', href: '#', icon: BookmarkIcon },
+  { name: 'Webinars', href: '#', icon: ComputerDesktopIcon },
 ]
 const blogPosts = [
   {
@@ -68,7 +70,7 @@ const blogPosts = [
     href: '#',
     preview: 'Eget ullamcorper ac ut vulputate fames nec mattis pellentesque elementum. Viverra tempor id mus.',
     imageUrl:
-      'https://images.unsplash.com/photo-1558478551-1a378f63328e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2849&q=80',
+        'https://images.unsplash.com/photo-1558478551-1a378f63328e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2849&q=80',
   },
   {
     id: 2,
@@ -76,7 +78,7 @@ const blogPosts = [
     href: '#',
     preview: 'Eget ullamcorper ac ut vulputate fames nec mattis pellentesque elementum. Viverra tempor id mus.',
     imageUrl:
-      'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2300&q=80',
+        'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2300&q=80',
   },
 ]
 </script>
@@ -85,7 +87,9 @@ const blogPosts = [
   <Popover class="relative bg-white dark:bg-transparent">
     <div class="absolute inset-0 z-30 shadow pointer-events-none" aria-hidden="true" />
     <div class="relative z-20">
-      <div class="flex items-center justify-between px-4 py-5 mx-auto max-w-7xl sm:px-6 sm:py-4 lg:px-8 md:justify-start md:space-x-10">
+      <div
+        class="flex items-center justify-between px-4 py-5 mx-auto max-w-7xl sm:px-6 sm:py-4 lg:px-8 md:justify-start md:space-x-10"
+      >
         <div class="hidden dark:block">
           <a href="#" class="flex">
             <span class="sr-only">Event Monster</span>
@@ -99,26 +103,46 @@ const blogPosts = [
           </a>
         </div>
         <div class="-my-2 -mr-2 md:hidden">
-          <PopoverButton class="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+          <PopoverButton
+            class="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+          >
             <span class="sr-only">Open menu</span>
-            <MenuIcon class="w-6 h-6" aria-hidden="true" />
+            <Bars3BottomLeftIcon class="w-6 h-6" aria-hidden="true" />
           </PopoverButton>
         </div>
         <div class="hidden md:flex-1 md:flex md:items-center md:justify-between">
           <PopoverGroup as="nav" class="flex space-x-10">
             <Popover v-slot="{ open }">
-              <PopoverButton class="inline-flex items-center text-base font-medium bg-white rounded-md dark:hover:text-white dark:bg-transparent group hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" :class="[open ? 'text-gray-900' : 'text-gray-500']">
+              <PopoverButton
+                class="inline-flex items-center text-base font-medium bg-white rounded-md dark:hover:text-white dark:bg-transparent group hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                :class="[open ? 'text-gray-900' : 'text-gray-500']"
+              >
                 <span>Events</span>
-                <ChevronDownIcon class="w-5 h-5 ml-2 group-hover:text-gray-500" :class="[open ? 'text-gray-600' : 'text-gray-400']" aria-hidden="true" />
+                <ChevronDownIcon
+                  class="w-5 h-5 ml-2 group-hover:text-gray-500"
+                  :class="[open ? 'text-gray-600' : 'text-gray-400']" aria-hidden="true"
+                />
               </PopoverButton>
 
-              <transition enter-active-class="transition duration-200 ease-out" enter-from-class="-translate-y-1 opacity-0" enter-to-class="translate-y-0 opacity-100" leave-active-class="transition duration-150 ease-in" leave-from-class="translate-y-0 opacity-100" leave-to-class="-translate-y-1 opacity-0">
+              <transition
+                enter-active-class="transition duration-200 ease-out"
+                enter-from-class="-translate-y-1 opacity-0" enter-to-class="translate-y-0 opacity-100"
+                leave-active-class="transition duration-150 ease-in"
+                leave-from-class="translate-y-0 opacity-100" leave-to-class="-translate-y-1 opacity-0"
+              >
                 <PopoverPanel class="absolute inset-x-0 z-10 hidden transform bg-white shadow-lg md:block top-full">
-                  <div class="grid px-4 py-6 mx-auto max-w-7xl gap-y-6 sm:grid-cols-2 sm:gap-8 sm:px-6 sm:py-8 lg:grid-cols-4 lg:px-8 lg:py-12 xl:py-16">
-                    <a v-for="item in solutions" :key="item.name" :href="item.href" class="flex flex-col justify-between p-3 -m-3 rounded-lg hover:bg-gray-50">
+                  <div
+                    class="grid px-4 py-6 mx-auto max-w-7xl gap-y-6 sm:grid-cols-2 sm:gap-8 sm:px-6 sm:py-8 lg:grid-cols-4 lg:px-8 lg:py-12 xl:py-16"
+                  >
+                    <a
+                      v-for="item in solutions" :key="item.name" :href="item.href"
+                      class="flex flex-col justify-between p-3 -m-3 rounded-lg hover:bg-gray-50"
+                    >
                       <div class="flex md:h-full lg:flex-col">
                         <div class="flex-shrink-0">
-                          <span class="inline-flex items-center justify-center w-10 h-10 text-white bg-indigo-500 rounded-md sm:h-12 sm:w-12">
+                          <span
+                            class="inline-flex items-center justify-center w-10 h-10 text-white bg-indigo-500 rounded-md sm:h-12 sm:w-12"
+                          >
                             <component :is="item.icon" class="w-6 h-6" aria-hidden="true" />
                           </span>
                         </div>
@@ -131,15 +155,22 @@ const blogPosts = [
                               {{ item.description }}
                             </p>
                           </div>
-                          <p class="mt-2 text-sm font-medium text-indigo-600 lg:mt-4">Learn more <span aria-hidden="true">&rarr;</span></p>
+                          <p class="mt-2 text-sm font-medium text-indigo-600 lg:mt-4">Learn more <span
+                            aria-hidden="true"
+                          >&rarr;</span></p>
                         </div>
                       </div>
                     </a>
                   </div>
                   <div class="bg-gray-50">
-                    <div class="px-4 py-5 mx-auto space-y-6 max-w-7xl sm:flex sm:space-y-0 sm:space-x-10 sm:px-6 lg:px-8">
+                    <div
+                      class="px-4 py-5 mx-auto space-y-6 max-w-7xl sm:flex sm:space-y-0 sm:space-x-10 sm:px-6 lg:px-8"
+                    >
                       <div v-for="item in callsToAction" :key="item.name" class="flow-root">
-                        <a :href="item.href" class="flex items-center p-3 -m-3 text-base font-medium text-gray-900 rounded-md hover:bg-gray-100">
+                        <a
+                          :href="item.href"
+                          class="flex items-center p-3 -m-3 text-base font-medium text-gray-900 rounded-md hover:bg-gray-100"
+                        >
                           <component :is="item.icon" class="flex-shrink-0 w-6 h-6 text-gray-400" aria-hidden="true" />
                           <span class="ml-3">{{ item.name }}</span>
                         </a>
@@ -152,27 +183,46 @@ const blogPosts = [
             <!-- <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900"> Pricing </a>
             <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900"> Docs </a> -->
             <Popover v-slot="{ open }">
-              <PopoverButton class="inline-flex items-center text-base font-medium bg-white rounded-md dark:bg-transparent group hover:text-gray-900 dark:hover:text-white" :class="[open ? 'text-gray-900' : 'text-gray-500']">
+              <PopoverButton
+                class="inline-flex items-center text-base font-medium bg-white rounded-md dark:bg-transparent group hover:text-gray-900 dark:hover:text-white"
+                :class="[open ? 'text-gray-900' : 'text-gray-500']"
+              >
                 <span>Meetups</span>
-                <ChevronDownIcon class="w-5 h-5 ml-2 group-hover:text-gray-500" :class="[open ? 'text-gray-600' : 'text-gray-400']" aria-hidden="true" />
+                <ChevronDownIcon
+                  class="w-5 h-5 ml-2 group-hover:text-gray-500"
+                  :class="[open ? 'text-gray-600' : 'text-gray-400']" aria-hidden="true"
+                />
               </PopoverButton>
 
-              <transition enter-active-class="transition duration-200 ease-out" enter-from-class="-translate-y-1 opacity-0" enter-to-class="translate-y-0 opacity-100" leave-active-class="transition duration-150 ease-in" leave-from-class="translate-y-0 opacity-100" leave-to-class="-translate-y-1 opacity-0">
+              <transition
+                enter-active-class="transition duration-200 ease-out"
+                enter-from-class="-translate-y-1 opacity-0" enter-to-class="translate-y-0 opacity-100"
+                leave-active-class="transition duration-150 ease-in"
+                leave-from-class="translate-y-0 opacity-100" leave-to-class="-translate-y-1 opacity-0"
+              >
                 <PopoverPanel class="absolute inset-x-0 z-10 hidden transform shadow-lg md:block top-full">
                   <div class="absolute inset-0 flex">
                     <div class="w-1/2 bg-white" />
                     <div class="w-1/2 bg-gray-50" />
                   </div>
                   <div class="relative grid grid-cols-1 mx-auto max-w-7xl lg:grid-cols-2">
-                    <nav class="grid px-4 py-8 bg-white gap-y-10 sm:grid-cols-2 sm:gap-x-8 sm:py-12 sm:px-6 lg:px-8 xl:pr-12">
+                    <nav
+                      class="grid px-4 py-8 bg-white gap-y-10 sm:grid-cols-2 sm:gap-x-8 sm:py-12 sm:px-6 lg:px-8 xl:pr-12"
+                    >
                       <div>
                         <h3 class="text-base font-medium text-gray-500">
                           Company
                         </h3>
                         <ul role="list" class="mt-5 space-y-6">
                           <li v-for="item in company" :key="item.name" class="flow-root">
-                            <a :href="item.href" class="flex items-center p-3 -m-3 text-base font-medium text-gray-900 rounded-md hover:bg-gray-50">
-                              <component :is="item.icon" class="flex-shrink-0 w-6 h-6 text-gray-400" aria-hidden="true" />
+                            <a
+                              :href="item.href"
+                              class="flex items-center p-3 -m-3 text-base font-medium text-gray-900 rounded-md hover:bg-gray-50"
+                            >
+                              <component
+                                :is="item.icon" class="flex-shrink-0 w-6 h-6 text-gray-400"
+                                aria-hidden="true"
+                              />
                               <span class="ml-4">{{ item.name }}</span>
                             </a>
                           </li>
@@ -184,8 +234,14 @@ const blogPosts = [
                         </h3>
                         <ul role="list" class="mt-5 space-y-6">
                           <li v-for="item in resources" :key="item.name" class="flow-root">
-                            <a :href="item.href" class="flex items-center p-3 -m-3 text-base font-medium text-gray-900 rounded-md hover:bg-gray-50">
-                              <component :is="item.icon" class="flex-shrink-0 w-6 h-6 text-gray-400" aria-hidden="true" />
+                            <a
+                              :href="item.href"
+                              class="flex items-center p-3 -m-3 text-base font-medium text-gray-900 rounded-md hover:bg-gray-50"
+                            >
+                              <component
+                                :is="item.icon" class="flex-shrink-0 w-6 h-6 text-gray-400"
+                                aria-hidden="true"
+                              />
                               <span class="ml-4">{{ item.name }}</span>
                             </a>
                           </li>
@@ -216,7 +272,9 @@ const blogPosts = [
                         </ul>
                       </div>
                       <div class="mt-6 text-sm font-medium">
-                        <a href="#" class="text-indigo-600 hover:text-indigo-500"> View all posts <span aria-hidden="true">&rarr;</span></a>
+                        <a href="#" class="text-indigo-600 hover:text-indigo-500"> View all posts <span
+                          aria-hidden="true"
+                        >&rarr;</span></a>
                       </div>
                     </div>
                   </div>
@@ -226,32 +284,50 @@ const blogPosts = [
           </PopoverGroup>
           <div class="flex items-center md:ml-12">
             <a href="/sign-in" class="text-base font-medium text-gray-500 hover:text-gray-900"> Sign in </a>
-            <a href="/sign-up" class="inline-flex items-center justify-center px-4 py-2 ml-8 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700"> Sign up </a>
+            <a
+              href="/sign-up"
+              class="inline-flex items-center justify-center px-4 py-2 ml-8 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700"
+            >
+              Sign up </a>
           </div>
         </div>
       </div>
     </div>
 
-    <transition enter-active-class="duration-200 ease-out" enter-from-class="scale-95 opacity-0" enter-to-class="scale-100 opacity-100" leave-active-class="duration-100 ease-in" leave-from-class="scale-100 opacity-100" leave-to-class="scale-95 opacity-0">
+    <transition
+      enter-active-class="duration-200 ease-out" enter-from-class="scale-95 opacity-0"
+      enter-to-class="scale-100 opacity-100" leave-active-class="duration-100 ease-in"
+      leave-from-class="scale-100 opacity-100" leave-to-class="scale-95 opacity-0"
+    >
       <PopoverPanel focus class="absolute inset-x-0 top-0 z-30 p-2 transition origin-top-right transform md:hidden">
         <div class="bg-white divide-y-2 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 divide-gray-50">
           <div class="px-5 pt-5 pb-6 sm:pb-8">
             <div class="flex items-center justify-between">
               <div>
-                <img class="w-auto h-8" src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=600" alt="Workflow">
+                <img
+                  class="w-auto h-8" src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=600"
+                  alt="Workflow"
+                >
               </div>
               <div class="-mr-2">
-                <PopoverButton class="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                <PopoverButton
+                  class="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                >
                   <span class="sr-only">Close menu</span>
-                  <XIcon class="w-6 h-6" aria-hidden="true" />
+                  <XMarkIcon class="w-6 h-6" aria-hidden="true" />
                 </PopoverButton>
               </div>
             </div>
             <div class="mt-6 sm:mt-8">
               <nav>
                 <div class="grid gap-7 sm:grid-cols-2 sm:gap-y-8 sm:gap-x-4">
-                  <a v-for="item in solutions" :key="item.name" :href="item.href" class="flex items-center p-3 -m-3 rounded-lg hover:bg-gray-50">
-                    <div class="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white bg-indigo-500 rounded-md sm:h-12 sm:w-12">
+                  <a
+                    v-for="item in solutions" :key="item.name" :href="item.href"
+                    class="flex items-center p-3 -m-3 rounded-lg hover:bg-gray-50"
+                  >
+                    <div
+                      class="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white bg-indigo-500 rounded-md sm:h-12 sm:w-12"
+                    >
                       <component :is="item.icon" class="w-6 h-6" aria-hidden="true" />
                     </div>
                     <div class="ml-4 text-base font-medium text-gray-900">
@@ -260,7 +336,9 @@ const blogPosts = [
                   </a>
                 </div>
                 <div class="mt-8 text-base">
-                  <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500"> View all products <span aria-hidden="true">&rarr;</span></a>
+                  <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500"> View all products <span
+                    aria-hidden="true"
+                  >&rarr;</span></a>
                 </div>
               </nav>
             </div>
@@ -280,7 +358,11 @@ const blogPosts = [
               <a href="#" class="text-base font-medium text-gray-900 rounded-md hover:text-gray-700"> Contact Sales </a>
             </div>
             <div class="mt-6">
-              <a href="#" class="flex items-center justify-center w-full px-4 py-2 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700"> Sign up </a>
+              <a
+                href="#"
+                class="flex items-center justify-center w-full px-4 py-2 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700"
+              >
+                Sign up </a>
               <p class="mt-6 text-base font-medium text-center text-gray-500">
                 Existing customer?
                 {{ ' ' }}

@@ -1,6 +1,6 @@
 {
   "private": true,
-  "packageManager": "yarn@3.2.2",
+  "packageManager": "yarn@3.2.3",
   "engines": {
     "node": "^16.11.0 || ^17.0.0 || || ^18.0.0"
   },
@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@headlessui/vue": "1.6.7",
-    "@heroicons/vue": "^1.0.6",
+    "@heroicons/vue": "latest",
     "@pinia/nuxt": "0.4.0",
     "@tailwindcss/aspect-ratio": "0.4.0",
     "@tailwindcss/forms": "0.5.2",

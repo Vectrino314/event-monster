@@ -49,6 +49,9 @@ catch (e) {
 
 const user = await fetchUser()
 console.log(user)
+
+// redirect to main page of the application
+
 </script>
 
 <template>

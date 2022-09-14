@@ -525,12 +525,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@heroicons/vue@npm:^1.0.6":
-  version: 1.0.6
-  resolution: "@heroicons/vue@npm:1.0.6"
+"@heroicons/vue@npm:latest":
+  version: 2.0.10
+  resolution: "@heroicons/vue@npm:2.0.10"
   peerDependencies:
     vue: ">= 3"
-  checksum: 63cf6ad94e271e5f8c47a2ee27e14d16aac8989f8450048853fea89bff545dae42db8ba3cb28dd08cef752fe32c88a418e976aae9ecd5a698973d56f5e87cb3c
+  checksum: 987f14af198abeb1275f88bb4a38c9ae4dcd2d5c09bb544c79e776dec29483c7eb5781d3d4af3e10833cf082e6dcc0148e8301c7df34a3ad5f732e7f02b36c55
   languageName: node
   linkType: hard
 
@@ -8577,7 +8577,7 @@ __metadata:
   dependencies:
     "@antfu/eslint-config": 0.26.1
     "@headlessui/vue": 1.6.7
-    "@heroicons/vue": ^1.0.6
+    "@heroicons/vue": latest
     "@iconify-json/carbon": 1.1.7
     "@iconify-json/ic": 1.1.9
     "@iconify-json/ph": 1.1.2
@@ -9544,7 +9544,7 @@ __metadata:
 
 "typescript@patch:typescript@4.7.4#~builtin<compat/typescript>":
   version: 4.7.4
-  resolution: "typescript@patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=f456af"
+  resolution: "typescript@patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=a1c5e5"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver

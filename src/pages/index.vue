@@ -1,13 +1,12 @@
-<script setup lang="ts">
+<script setup>
 definePageMeta({
-  // set custom layout
-  layout: 'default',
+  layout: 'dashboard',
 })
 </script>
 
 <template>
   <div>
-    <Header />
+    <!--    <Header /> -->
     <Starter />
   </div>
 </template>

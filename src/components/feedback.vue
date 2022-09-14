@@ -1,8 +1,8 @@
 <script setup>
 import { ref } from 'vue'
 import { Dialog, DialogPanel, DialogTitle, TransitionChild, TransitionRoot } from '@headlessui/vue'
-import { CheckCircleIcon, ExclamationCircleIcon } from '@heroicons/vue/outline'
-// import { CheckCircleIcon } from '@heroicons/vue/outline'
+import { CheckCircleIcon, ExclamationCircleIcon } from '@heroicons/vue/24/outline'
+// import { CheckCircleIcon } from '@heroicons/vue/24/outline'
 import { actions, useFeedback } from '~/store/feedback'
 // const props = defineProps({
 //   open: {

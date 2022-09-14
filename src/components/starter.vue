@@ -16,7 +16,7 @@ const lists = computed<ILink[]>(() => [
       <a target="_blank" href="https://productdevbook.com">productdevbook.com</a>
       <div class="flex space-x-2">
         <TemLanguageChange />
-        <TemColorChange />
+<!--        <TemColorChange />-->
       </div>
     </div>
     <div class="flex flex-col">
@@ -60,17 +60,17 @@ const lists = computed<ILink[]>(() => [
       </div>
     </div>
 
-    <ul role="list" class="mt-10 space-y-4">
-      <li v-for="item in lists" :key="item.id">
-        <List
-          :link="{
-            id: item.id,
-            title: item.title,
-            url: item.url,
-            icon: item.icon,
-          }"
-        />
-      </li>
-    </ul>
+<!--    <ul role="list" class="mt-10 space-y-4">-->
+<!--      <li v-for="item in lists" :key="item.id">-->
+<!--        <List-->
+<!--          :link="{-->
+<!--            id: item.id,-->
+<!--            title: item.title,-->
+<!--            url: item.url,-->
+<!--            icon: item.icon,-->
+<!--          }"-->
+<!--        />-->
+<!--      </li>-->
+<!--    </ul>-->
   </div>
 </template>

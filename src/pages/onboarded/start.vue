@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, reactive, ref } from 'vue'
-import { UserIcon, UsersIcon } from '@heroicons/vue/solid'
+import { UserIcon, UsersIcon } from '@heroicons/vue/20/solid'
 import { useSignup } from '~/store/signup'
 import { useOnboarded } from '~/store/onboarded'
 

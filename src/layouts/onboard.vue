@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, reactive, ref } from 'vue'
-import { ArrowSmRightIcon } from '@heroicons/vue/outline'
+import { ArrowRightIcon } from '@heroicons/vue/24/outline'
 import { useSignup } from '~/store/signup'
 import { useOnboarded } from '~/store/onboarded'
 import { actions, useFeedback } from '~/store/feedback'
@@ -74,7 +74,7 @@ checkStatus()
             @click="onboarded.navigate(router.currentRoute.value, step)"
           >
             {{ step.name !== 'complete' ? 'Next Step' : 'Go To Dashboard' }}
-            <ArrowSmRightIcon class="ml-1 h-5 w-5 text-white" aria-hidden="true" />
+            <ArrowRightIcon class="ml-1 h-5 w-5 text-white" aria-hidden="true" />
           </button>
         </div>
       </div>
