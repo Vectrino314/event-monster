@@ -42,7 +42,7 @@ const navigation = [
   { name: 'Meetups', icon: HomeIcon, current: false, href: '#' },
 ]
 const userNavigation = [
-  { name: 'Your Profile', href: '#' },
+  { name: 'Your Profile', href: 'settings/account' },
   { name: 'Settings', href: '#' },
   { name: 'Sign out', href: '#' },
 ]
