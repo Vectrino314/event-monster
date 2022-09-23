@@ -96,7 +96,7 @@ const sidebarOpen = ref(false)
               </TransitionChild>
               <div class="flex flex-shrink-0 items-center px-4">
                 <img
-                  class="h-8 w-auto" src="/EventMonster%20Logo%20Web.png"
+                  class="h-8 w-auto" src="../assets/images/EventMonster_Logo_Web.png"
                   alt="Event Monster"
                 >
               </div>
@@ -142,7 +142,7 @@ const sidebarOpen = ref(false)
         <div class="flex flex-shrink-0 items-center px-4">
           <a href="/">
             <img
-              class="h-8 w-auto" src="/EventMonster%20Logo%20Web.png"
+              class="h-8 w-auto" src="../assets/images/EventMonster_Logo_Web.png"
               alt="Event Monster"
             >
           </a>

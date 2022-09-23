@@ -93,13 +93,13 @@ const blogPosts = [
         <div class="hidden dark:block">
           <a href="#" class="flex">
             <span class="sr-only">Event Monster</span>
-            <img class="w-auto h-8 sm:h-10" src="EventMonster Logo Web White.png" alt="">
+            <img class="w-auto h-8 sm:h-10" src="../assets/images/EventMonster_Logo_Web_White.png" alt="">
           </a>
         </div>
         <div class="block dark:hidden">
           <a href="#" class="flex">
             <span class="sr-only">Event Monster</span>
-            <img class="w-auto h-8 sm:h-10" src="EventMonster Logo Web.png" alt="">
+            <img class="w-auto h-8 sm:h-10" src="../assets/images/EventMonster_Logo_Web.png" alt="">
           </a>
         </div>
         <div class="-my-2 -mr-2 md:hidden">

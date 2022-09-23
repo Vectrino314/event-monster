@@ -16,7 +16,7 @@ const props = defineProps<{
       <div class="relative flex justify-between h-16">
         <div class="flex flex-row justify-between items-center w-full">
           <a href="/">
-            <img class="w-auto h-7 mx-auto" src="/EventMonster Logo Web.png" alt="Workflow">
+            <img class="w-auto h-7 mx-auto" src="../../assets/images/EventMonster_Logo_Web.png" alt="Workflow">
           </a>
           <small v-if="showLink">{{ textPre }} <a :href="urlLink" class="text-indigo-600">
             {{ cta }}
