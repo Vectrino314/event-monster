@@ -9,7 +9,7 @@ definePageMeta({
     <!--    <div></div> -->
     <div class="flex flex-col gap-8 flex-shrink-0 items-center px-4">
       <img
-        class="h-12 sm:h-24 md:h-32 lg:h-48 xl:h-56 w-auto" src="/src/assets/images/EventMonster%20Logo%20Web.png"
+        class="h-12 sm:h-24 md:h-32 lg:h-48 xl:h-56 w-auto" src="../assets/images/EventMonster%20Logo%20Web.png"
         alt="Event Monster"
       >
       <div class="font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl">
@@ -35,19 +35,19 @@ definePageMeta({
       <div class="grid grid-cols-3 place-items-center">
         <a target="_blank" href="https://twitter.com/ItsEventMonster">
           <img
-              class="h-12 w-auto" src="/src/assets/images/Twitter-Emblem.png"
+              class="h-12 w-auto" src="../assets/images/Twitter-Emblem.png"
               alt="Twitter"
           >
         </a>
         <a target="_blank" href="https://www.linkedin.com/company/eventmonsterco">
           <img
-              class="h-12 w-auto" src="/src/assets/images/Linkedin-Emblem.png"
+              class="h-12 w-auto" src="../assets/images/Linkedin-Emblem.png"
               alt="LinkedIn"
           >
         </a>
         <a target="_blank" href="https://discord.gg/CE39CtrmnX">
           <img
-              class="h-12 w-auto" src="/src/assets/images/Discord-Emblem.png"
+              class="h-12 w-auto" src="../assets/images/Discord-Emblem.png"
               alt="Discord"
           >
         </a>
