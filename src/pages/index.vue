@@ -5,7 +5,7 @@ definePageMeta({
 </script>
 
 <template>
-  <div class="p-12 grid gap-y-2 place-items-center h-screen">
+  <div class="p-12 grid gap-y-2 place-items-center lg:h-screen">
     <!--    <div></div> -->
     <div class="flex flex-col gap-8 flex-shrink-0 items-center px-4">
       <img
