@@ -9,7 +9,7 @@ definePageMeta({
     <!--    <div></div> -->
     <div class="flex flex-col gap-8 flex-shrink-0 items-center px-4">
       <img
-        class="h-12 sm:h-24 md:h-32 lg:h-48 xl:h-56 w-auto" src="../assets/images/EventMonster%20Logo%20Web.png"
+        class="h-12 sm:h-24 md:h-32 lg:h-48 xl:h-56 w-auto" src="../assets/images/EventMonster_Logo_Web.png"
         alt="Event Monster"
       >
       <div class="font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl">
