@@ -68,7 +68,7 @@ definePageMeta({
                       <section>
                         <div class="flex items-center">
                           <div class="mr-4">
-                            <img class="w-20 h-20 rounded-full bg-blue-300" src="../../images/user-avatar-80.png"
+                            <img class="w-20 h-20 rounded-full bg-blue-300" src="../../assets/images/user-avatar-80.png"
                                  width="80"
                                  height="80" alt="User upload"/>
                           </div>
