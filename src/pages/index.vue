@@ -9,27 +9,31 @@ definePageMeta({
     <!--    <div></div> -->
     <div class="flex flex-col gap-8 flex-shrink-0 items-center px-4">
       <img
-        class="h-12 sm:h-24 md:h-32 lg:h-48 xl:h-56 w-auto" src="../assets/images/EventMonster_Logo_Web.png"
+        class="block dark:hidden h-12 sm:h-24 md:h-32 lg:h-48 xl:h-56 w-auto" src="../assets/images/EventMonster_Logo_Web.png"
         alt="Event Monster"
       >
-      <div class="font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl">
+      <img
+          class="hidden dark:block h-12 sm:h-24 md:h-32 lg:h-48 xl:h-56 w-auto" src="../assets/images/EventMonster_Logo_Web_White.png"
+          alt="Event Monster"
+      >
+      <div class="dark:text-white font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl">
         Your Favorite Tech Events & Meetups in One Place
       </div>
-      <div class="font-medium text-lg max-w-xl">
+      <div class="dark:text-white font-medium text-lg max-w-xl">
         Welcome to the first event site where you can post and promote your online events like Twitter Spaces, LinkedIn
         Audio and more.
       </div>
-      <div class="font-medium text-lg max-w-xl">
+      <div class="dark:text-white font-medium text-lg max-w-xl">
         With a roadmap that also includes tickets, web3 and unique payment API, we are excited to help you promote your
         hard work.
       </div>
-      <div class="font-medium text-lg max-w-xl">
+      <div class="dark:text-white font-medium text-lg max-w-xl">
         MVP is expected to launch in October/November 2022!
       </div>
-      <div class="font-medium text-lg max-w-xl">
+      <div class="dark:text-white font-medium text-lg max-w-xl">
         <!--        additional space -->
       </div>
-      <div class="font-bold text-lg max-w-xl">
+      <div class="dark:text-white font-bold text-lg max-w-xl">
         Until then, please join us on Twitter, LinkedIn, or Discord
       </div>
       <div class="grid grid-cols-3 place-items-center">
