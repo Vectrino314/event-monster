@@ -18,6 +18,9 @@ module.exports = {
       fontFamily: {
         sans: ['"Inter var"', ...defaultTheme.fontFamily.sans],
       },
+      colors: {
+        link: '#797af4',
+      },
     },
   },
   variants: {

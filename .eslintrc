@@ -1,6 +1,7 @@
 {
     "extends": [
-        "@antfu"
+        "plugin:vue/base",
+        "@antfu",
     ],
     "rules": {
         "@typescript-eslint/consistent-type-imports": "off",

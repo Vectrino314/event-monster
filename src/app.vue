@@ -2,16 +2,18 @@
 import { InitApp } from '~/utils/initApp'
 InitApp()
 const locale = useState<string>('locale.i18n')
+const route = useRoute()
 </script>
 
 <template>
   <Html :lang="locale">
     <Body
-      class="bg-white text-gray-800 antialiased transition-colors duration-300 dark:bg-gray-900 dark:text-gray-200"
+      class="bg-white text-gray-800 antialiased transition-colors duration-300"
     >
       <NuxtLayout>
         <NuxtPage />
       </NuxtLayout>
+      <Feedback />
     </Body>
   </Html>
 </template>
