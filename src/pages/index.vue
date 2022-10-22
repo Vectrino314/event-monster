@@ -37,13 +37,13 @@ definePageMeta({
         Until then, please join us on Twitter, LinkedIn, or Discord
       </div>
       <div class="grid grid-cols-3 place-items-center">
-        <a target="_blank" href="https://twitter.com/ItsEventMonster">
+        <a target="_blank" href="https://twitter.com/HeyEventMonster">
           <img
               class="h-12 w-auto" src="../assets/images/Twitter-Emblem.png"
               alt="Twitter"
           >
         </a>
-        <a target="_blank" href="https://www.linkedin.com/company/eventmonsterco">
+        <a target="_blank" href="https://www.linkedin.com/company/heyeventmonster">
           <img
               class="h-12 w-auto" src="../assets/images/Linkedin-Emblem.png"
               alt="LinkedIn"
