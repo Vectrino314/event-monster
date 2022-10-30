@@ -6,9 +6,14 @@ const route = useRoute()
 </script>
 
 <template>
-  <Html :lang="locale">
+  <Html class="font-sans" :lang="locale">
+  <Head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  </Head>
     <Body
-      class="bg-white text-gray-800 antialiased transition-colors duration-300"
+      class="bg-white text-gray-800 antialiased font-body transition-colors duration-300"
     >
       <NuxtLayout>
         <NuxtPage />

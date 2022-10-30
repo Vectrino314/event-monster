@@ -5,15 +5,15 @@ definePageMeta({
 </script>
 
 <template>
-  <div class="p-12 grid gap-y-2 place-items-center lg:h-screen">
+  <div class="p-12 grid grid-cols-12 gap-y-2 place-items-center lg:h-screen">
     <!--    <div></div> -->
-    <div class="flex flex-col gap-8 flex-shrink-0 items-center px-4">
+    <div class="flex flex-col col-span-12 gap-8 flex-shrink-0 items-center px-4">
       <img
-        class="block dark:hidden h-12 sm:h-24 md:h-32 lg:h-48 xl:h-56 w-auto" src="../assets/images/EventMonster_Logo_Web.png"
+        class="block mb-12 dark:hidden h-6 sm:h-12 md:h-24 lg:h-32 w-auto" src="../assets/images/eventralize-logo-highres.png"
         alt="Event Monster"
       >
       <img
-          class="hidden dark:block h-12 sm:h-24 md:h-32 lg:h-48 xl:h-56 w-auto" src="../assets/images/EventMonster_Logo_Web_White.png"
+          class="hidden dark:block h-6 sm:h-12 md:h-24 lg:h-32 w-auto" src="../assets/images/eventralize-logo-highres-white.png"
           alt="Event Monster"
       >
       <div class="dark:text-white font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl">
@@ -28,7 +28,7 @@ definePageMeta({
         hard work.
       </div>
       <div class="dark:text-white font-medium text-lg max-w-xl">
-        MVP is expected to launch in October/November 2022!
+        MVP is expected to launch in Q4 2022!
       </div>
       <div class="dark:text-white font-medium text-lg max-w-xl">
         <!--        additional space -->
@@ -37,13 +37,13 @@ definePageMeta({
         Until then, please join us on Twitter, LinkedIn, or Discord
       </div>
       <div class="grid grid-cols-3 place-items-center">
-        <a target="_blank" href="https://twitter.com/HeyEventMonster">
+        <a target="_blank" href="https://twitter.com/eventralize">
           <img
               class="h-12 w-auto" src="../assets/images/Twitter-Emblem.png"
               alt="Twitter"
           >
         </a>
-        <a target="_blank" href="https://www.linkedin.com/company/heyeventmonster">
+        <a target="_blank" href="https://www.linkedin.com/company/eventralize">
           <img
               class="h-12 w-auto" src="../assets/images/Linkedin-Emblem.png"
               alt="LinkedIn"
