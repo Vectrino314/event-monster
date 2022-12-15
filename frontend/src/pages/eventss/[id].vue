@@ -22,7 +22,7 @@ definePageMeta({
       <div class="col-span-12 flex justify-between">
         <div class="col-span-7 flex flex-col justify-items-start bg-gray-400">
           <a class="text-left" href="/events">⬅️Back</a>
-<!--                  {{ data }}-->
+                  {{ data }}
           <div
               v-for="category in data?.event.data.attributes?.categories?.data"
               class="mt-24 text-eventPurple [max-width:max-content] font-semibold text-lg px-12 py-6 rounded-full border-2 border-eventPurple"
