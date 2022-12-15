@@ -742,10 +742,10 @@ definePageMeta({
   </section>
   <!-- Footer -->
   <section class="relative pt-24 bg-eventPurple overflow-hidden">
-    <img
-      class="absolute left-1/2 bottom-0 h-full transform -translate-x-1/2"
-      src="flaro-assets/images/footers/gradient.svg" alt=""
-    >
+<!--    <img-->
+<!--      class="absolute left-1/2 bottom-0 h-full transform -translate-x-1/2"-->
+<!--      src="flaro-assets/images/footers/gradient.svg" alt=""-->
+<!--    >-->
     <div class="relative z-10 container px-4 mx-auto">
       <div class="pb-24 border-b border-gray-900">
         <div class="flex flex-wrap -m-8">
