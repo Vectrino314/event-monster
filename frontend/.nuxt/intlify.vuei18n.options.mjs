@@ -1,0 +1,1 @@
+export default () => Promise.resolve({"locale":"en-US","fallbackLocale":"en-US","availableLocales":["en-US","tr-TR"],"sync":true})

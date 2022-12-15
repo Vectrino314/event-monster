@@ -1,0 +1,15 @@
+node_modules
+*.log
+frontend/.nuxt
+nuxt.d.ts
+frontend/.output
+.idea
+
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+
+.DS_Store

@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@layouts/*": [
+        "src/layouts/*"
+      ],
+      "@store/*": [
+        "src/store/*"
+      ],
+    }
+  },
+  "extends": "./.nuxt/tsconfig.json"
+}
