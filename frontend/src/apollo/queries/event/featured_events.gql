@@ -1,0 +1,21 @@
+{
+    events(filters: { featured: {eq: true}}) {
+        data {
+            id
+            attributes {
+                title
+                date
+                featured
+                hosted_by
+                is_free
+                categories {
+                    data {
+                        attributes {
+                            name
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

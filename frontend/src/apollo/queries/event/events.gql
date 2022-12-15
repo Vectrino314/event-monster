@@ -1,0 +1,20 @@
+query getAllEvents {
+    events {
+        data {
+            id
+            attributes {
+                title
+                date
+                featured
+                hosted_by
+                categories {
+                    data {
+                        attributes {
+                            name
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

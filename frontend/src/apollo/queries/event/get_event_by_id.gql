@@ -1,0 +1,22 @@
+query get_by_id($id: ID!) {
+    event(id: $id) {
+        data {
+            id
+            attributes {
+                title
+                date
+                featured
+                hosted_by
+                is_free
+                description
+                categories {
+                    data {
+                        attributes {
+                            name
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

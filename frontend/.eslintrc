@@ -1,0 +1,18 @@
+{
+    "extends": [
+        "plugin:vue/base",
+        "plugin:vue/vue3-recommended",
+        "@antfu"
+    ],
+    "rules": {
+        "@typescript-eslint/consistent-type-imports": "off",
+        "vue/no-deprecated-slot-attribute": "off",
+        "vue/no-reserved-component-names": "off"
+    },
+    "globals": {
+        "defineProps": "readonly",
+        "defineEmits": "readonly",
+        "defineExpose": "readonly",
+        "withDefaults": "readonly"
+    }
+}

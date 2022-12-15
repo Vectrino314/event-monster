@@ -1,0 +1,62 @@
+{
+  "private": true,
+  "packageManager": "yarn@3.2.3",
+  "engines": {
+    "node": "^16.11.0 || ^17.0.0 || || ^18.0.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true,
+      "vue/setup-compiler-macros": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
+    ]
+  },
+  "scripts": {
+    "develop": "nuxi dev",
+    "build": "nuxi build",
+    "generate": "nuxi generate",
+    "start": "node frontend/.output/server/index.mjs",
+    "lint": "eslint .",
+    "allupdate": "yarn upgrade-interactive"
+  },
+  "dependencies": {
+    "@formkit/nuxt": "^1.0.0-beta.12",
+    "@headlessui/vue": "1.6.7",
+    "@heroicons/vue": "latest",
+    "@pinia/nuxt": "^0.4.5",
+    "@tailwindcss/aspect-ratio": "0.4.0",
+    "@tailwindcss/forms": "0.5.2",
+    "@tailwindcss/line-clamp": "0.4.0",
+    "@tailwindcss/typography": "0.5.4",
+    "dayjs": "^1.11.7",
+    "pinia": "2.0.18"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "0.26.1",
+    "@iconify-json/carbon": "1.1.7",
+    "@iconify-json/ic": "1.1.9",
+    "@iconify-json/ph": "1.1.2",
+    "@iconify-json/twemoji": "1.1.5",
+    "@intlify/nuxt3": "0.2.3",
+    "@nuxtjs/apollo": "next",
+    "@nuxtjs/color-mode": "3.1.4",
+    "@nuxtjs/strapi": "^1.6.3",
+    "@nuxtjs/tailwindcss": "^6.1.3",
+    "@unocss/nuxt": "^0.46.5",
+    "@vueuse/nuxt": "9.1.0",
+    "eslint": "8.22.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-vue": "9.3.0",
+    "nuxt": "latest",
+    "prettier": "2.7.1",
+    "prettier-plugin-tailwindcss": "0.1.13",
+    "sass": "1.54.4",
+    "sass-loader": "13.0.2",
+    "typescript": "4.7.4"
+  }
+}
