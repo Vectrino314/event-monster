@@ -396,13 +396,13 @@ definePageMeta({
               <div class="p-8 absolute -top-16 -left-16 w-full">
                 <img
                   class="w-full transform scale-75 md:w-auto rounded-lg"
-                  src="/assets/images/Phone%20Left.png" alt=""
+                  src="/assets/images/Phone_Left.png" alt=""
                 >
               </div>
               <div class="p-8 absolute -top-36 left-16 w-full">
                 <img
                   class="w-full transform scale-75 md:w-auto rounded-lg"
-                  src="/assets/images/Phone%20Right.png"
+                  src="/assets/images/Phone_Right.png"
                   alt=""
                 >
               </div>
